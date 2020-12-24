@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+docker-compose build ml &> /dev/null
+exec docker-compose run --rm --no-deps -T ml pyls
